@@ -78,3 +78,77 @@ while True:
         break
     else:
         print("Invalid choice")
+
+
+ Algorithm
+
+1. Insertion Algorithm
+
+1. If the tree is empty, create a new node as root.
+
+
+2. If the value to insert is less than the root, insert it in the left subtree.
+
+
+3. If the value to insert is greater than the root, insert it in the right subtree.
+
+
+4. Repeat recursively until the correct position is found.
+
+
+
+
+---
+
+2. Search Algorithm
+
+1. Start from the root node.
+
+
+2. If the key equals the root’s value, return it (found).
+
+
+3. If the key is smaller, move to the left subtree.
+
+
+4. If the key is greater, move to the right subtree.
+
+
+5. If the node becomes None, the key is not found.
+
+
+
+
+---
+
+3. Deletion Algorithm
+
+To delete a node:
+
+1. If the tree is empty, return.
+
+
+2. If the key is smaller, move to the left subtree.
+
+
+3. If the key is greater, move to the right subtree.
+
+
+4. If the key is equal to the node’s value:
+
+Case 1: Node has no child → Delete the node.
+
+Case 2: Node has one child → Replace node with its child.
+
+Case 3: Node has two children → Find inorder successor (smallest in right subtree) and replace node’s value, then delete successor node.
+
+
+4. Display (Inorder Traversal) Algorithm
+
+1. Traverse left subtree.
+
+
+2. Visit root node (print value).
+
+
+3. Traverse right subtree.
