@@ -64,3 +64,38 @@ while True:
         break
     else:
         print("Invalid choice.")
+
+Algorithm (Step-by-Step)
+
+1. Create a hash table of fixed size (say 10).
+
+
+2. Hash Function: Use the division method →
+
+
+
+\text{index} = \text{key} \% \text{size}
+
+4. Insert(key, value):
+
+Compute hash index.
+
+If key already exists → update value.
+
+Else → append (key, value) to the chain.
+
+
+
+5. Search(key):
+
+Compute index.
+
+Traverse the list at that index to find key.
+
+
+
+6. Delete(key):
+
+Compute index.
+
+Search and remove the (key, value) pair from the list.
