@@ -59,3 +59,46 @@ cust_list = sorted(custids)
 print("\nSorted List for Binary Search:", cust_list)
 key = int(input("Enter customer ID to search (Binary): "))
 binary_search(cust_list, key)
+
+Algorithm
+
+1. Linear Search Algorithm
+
+1. Start from the first element of the list.
+
+
+2. Compare each element with the target ID.
+
+
+3. If a match is found, return its position.
+
+
+4. If the end of the list is reached and no match is found, return “Not Found”.
+
+
+
+2. Binary Search Algorithm
+
+1. Sort the list in ascending order.
+
+
+2. Set low = 0 and high = len(list) - 1.
+
+
+3. Find the middle index mid = (low + high) // 2.
+
+
+4. If list[mid] == target, return “Found”.
+
+
+5. If list[mid] > target, set high = mid - 1.
+
+
+6. Else, set low = mid + 1.
+
+
+7. Repeat until low > high.
+
+
+8. If not found, return “Not Found”.
+
