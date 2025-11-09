@@ -142,7 +142,7 @@ Pointer to next and previous node.
 
 
 
-2. Add Student
+2. Add Student 
 
 Create a new node with given details.
 
