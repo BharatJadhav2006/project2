@@ -59,3 +59,67 @@ while True:
         break
     else:
         print("❗ Invalid choice. Please try again.")
+
+
+
+Algorithm
+
+1. Start
+
+
+2. Initialize an empty queue
+
+
+3. Display the menu with options:
+
+Add Event
+
+Process Next Event
+
+Display Pending Events
+
+Cancel Event
+
+Exit
+
+
+
+4. Read the user’s choice
+
+
+5. If the choice is Add Event,
+
+Input event name and date
+
+Add the event to the queue
+
+
+
+6. If the choice is Process Next Event,
+
+Remove the first event from the queue
+
+Display the processed event
+
+
+
+7. If the choice is Display Pending Events,
+
+Show all events currently in the queue
+
+
+
+8. If the choice is Cancel Event,
+
+Input the event name
+
+Search and remove the event from the queue if found
+
+
+
+9. If the choice is Exit,
+
+Stop the program
+
+10. Repeat steps 3–9 until the user chooses to exit
+11. Stop
