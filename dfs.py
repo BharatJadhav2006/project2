@@ -23,3 +23,23 @@ visited = [False]*n
 
 print("DFS Traversal:")
 dfs(graph, start_index, visited)
+
+
+Algorithm: DFS using Adjacency Matrix
+
+1. Start with the starting node (say A).
+
+
+2. Mark the starting node as visited.
+
+
+3. Visit the adjacent (connected) unvisited nodes of the current node.
+
+
+4. For each unvisited node, call DFS recursively.
+
+
+5. Repeat the process until all nodes are visited.
+
+
+6. Stop when all nodes are explored
