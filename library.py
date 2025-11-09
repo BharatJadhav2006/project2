@@ -68,3 +68,64 @@ else:
 print("-" * 50)
 print("Members with no books:", book_borrow.count(0))
 print("-" * 50)
+
+
+algorithms
+
+
+algorithm
+
+1. Start
+
+
+2. Input data:
+
+List of members aur unhone kitni books li (borrow ki).
+
+Dictionary of books aur unko kitni baar borrow kiya gaya.
+
+
+
+3. Find average:
+
+Sab members ke borrowed books add karo.
+
+Total members se divide karo.
+
+
+
+4. Find highest & lowest borrowed book:
+
+Sabse zyada baar borrow hui book ka naam find karo.
+
+Sabse kam baar borrow hui book ka naam find karo.
+
+
+
+5. Count zero borrowers:
+
+Jitne members ne 0 books borrow ki, unka count karo.
+
+
+
+6. Find most frequent borrow count (mode):
+
+Jo borrow count sabse zyada baar repeat hua, wo find karo.
+
+
+
+7. Display results:
+
+Average
+
+Highest book
+
+Lowest book
+
+Zero borrowers
+
+Most frequent borrow count
+
+
+
+8. Stop
