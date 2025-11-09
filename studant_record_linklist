@@ -1,0 +1,182 @@
+# Doubly Linked List Node
+class Node:
+    def __init__(self, roll, name, marks):
+        self.roll = roll
+        self.name = name
+        self.marks = marks
+        self.next = None
+        self.prev = None
+
+# Student Record Management System
+class StudentRecordSystem:
+    def __init__(self):
+        self.head = None
+
+    # Add a new student record
+    def add_student(self, roll, name, marks):
+        new_node = Node(roll, name, marks)
+        if self.head is None:
+            self.head = new_node
+            print("Student added successfully!")
+            return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        temp.next = new_node
+        new_node.prev = temp
+        print("Student added successfully!")
+
+    # Delete a student record by roll number
+    def delete_student(self, roll):
+        temp = self.head
+        while temp:
+            if temp.roll == roll:
+                if temp.prev:
+                    temp.prev.next = temp.next
+                else:
+                    self.head = temp.next
+                if temp.next:
+                    temp.next.prev = temp.prev
+                print(f"Record with Roll No {roll} deleted.")
+                return
+            temp = temp.next
+        print("Record not found!")
+
+    # Update student record
+    def update_student(self, roll, name=None, marks=None):
+        temp = self.head
+        while temp:
+            if temp.roll == roll:
+                if name:
+                    temp.name = name
+                if marks:
+                    temp.marks = marks
+                print("Record updated successfully!")
+                return
+            temp = temp.next
+        print("Record not found!")
+
+    # Search for a student record
+    def search_student(self, roll):
+        temp = self.head
+        while temp:
+            if temp.roll == roll:
+                print(f"\nRecord Found:\nRoll No: {temp.roll}\nName: {temp.name}\nMarks: {temp.marks}")
+                return
+            temp = temp.next
+        print("Record not found!")
+
+    # Display all student records
+    def display_records(self):
+        temp = self.head
+        if not temp:
+            print("No records to display!")
+            return
+        print("\nStudent Records:")
+        while temp:
+            print(f"Roll No: {temp.roll}, Name: {temp.name}, Marks: {temp.marks}")
+            temp = temp.next
+
+
+# -------- MAIN PROGRAM --------
+if __name__ == "__main__":
+    system = StudentRecordSystem()
+
+    while True:
+        print("\n--- Student Record Management System ---")
+        print("1. Add Student")
+        print("2. Delete Student")
+        print("3. Update Student")
+        print("4. Search Student")
+        print("5. Display All Records")
+        print("6. Exit")
+
+        choice = int(input("Enter your choice: "))
+
+        if choice == 1:
+            roll = int(input("Enter Roll No: "))
+            name = input("Enter Name: ")
+            marks = float(input("Enter Marks: "))
+            system.add_student(roll, name, marks)
+
+        elif choice == 2:
+            roll = int(input("Enter Roll No to delete: "))
+            system.delete_student(roll)
+
+        elif choice == 3:
+            roll = int(input("Enter Roll No to update: "))
+            name = input("Enter new name (or press Enter to skip): ")
+            marks_input = input("Enter new marks (or press Enter to skip): ")
+            marks = float(marks_input) if marks_input else None
+            system.update_student(roll, name if name else None, marks)
+
+        elif choice == 4:
+            roll = int(input("Enter Roll No to search: "))
+            system.search_student(roll)
+
+        elif choice == 5:
+            system.display_records()
+
+        elif choice == 6:
+            print("Exiting program. Goodbye!")
+            break
+
+        else:
+            print("Invalid choice! Please try again.")
+
+
+
+Algorithm (Step-by-Step Explanation)
+
+1. Structure Design
+
+Create a Node class to store:
+
+Roll No
+
+Name
+
+Marks
+
+Pointer to next and previous node.
+
+
+
+2. Add Student
+
+Create a new node with given details.
+
+If the list is empty, make it the head.
+
+Else, add the new node at the end.
+
+
+3. Delete Student
+
+Traverse the list using Roll No.
+
+If found:
+
+Adjust the previous and next links.
+
+Delete that node.
+
+
+
+4. Update Student
+
+Search the student by Roll No.
+
+If found, update the Name or Marks.
+
+
+5. Search Student
+
+Traverse the list and match Roll No.
+
+If found, display student details.
+
+
+6. Display Records
+
+Traverse from head to end and print all records.
