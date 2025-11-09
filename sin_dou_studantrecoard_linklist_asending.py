@@ -77,3 +77,44 @@ while True:
         break
     else:
         print("Invalid choice.")
+
+Algorithm (Step-by-Step and Easy to Understand)
+
+1️⃣ Create a Node
+
+Each node stores:
+
+Roll number
+
+Name
+
+Marks
+
+Pointer (next)
+
+
+2️⃣ Add Student
+
+Create a new node with roll, name, marks
+
+If list empty → make it the first node
+
+Else → add it to the end
+
+
+3️⃣ Sort Students
+
+Use Bubble Sort on linked list
+
+Compare roll numbers or marks
+
+Swap data if they are out of order
+
+You can choose ascending or descending order
+
+
+4️⃣ Display Students
+
+Start from head
+
+Print roll number, name, and marks of each node
